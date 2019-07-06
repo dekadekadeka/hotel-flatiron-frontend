@@ -12,7 +12,6 @@ export default function RoomFilter({rooms}) {
     const {handleChange, type, capacity, price, minPrice,
         maxPrice, breakfast, pets} = context
 
-
     //get unique types
     let types = getUnique(rooms, "type")
 
