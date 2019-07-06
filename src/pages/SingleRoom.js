@@ -58,7 +58,6 @@ export default class SingleRoom extends Component {
                 <article className="info">
                     <h3>info</h3>
                     <h6>price : ${price}</h6>
-                    {/* <h6>size : {size} SQFT</h6> */}
                     <h6>max capacity : {
                         capacity > 1 ? `${capacity} people` : `${capacity} person`
                         }</h6>
@@ -75,6 +74,11 @@ export default class SingleRoom extends Component {
                 })}
             </ul>
         </section>
+        <div className="reservation-btn">
+        <Link to="/reservation" className="btn-primary">
+                    select this room
+                </Link>
+        </div>
         </>
         )
     }
