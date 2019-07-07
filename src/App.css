@@ -425,8 +425,8 @@ h6 {
   grid-row-gap: 1rem;
 }
 
-.reservation-btn {
-  display: flex;
+.reservation-btn{
+  display: grid;
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
@@ -525,3 +525,10 @@ h6 {
   }
 }
 /* end of rooms filter*/
+/* reservation form */
+.reservation-div{
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+}
+/* end of reservation form */
