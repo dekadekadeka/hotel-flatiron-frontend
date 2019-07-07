@@ -82,8 +82,8 @@ export default class SingleRoom extends Component {
         </section>
         <div className="reservation-btn">
             <button className="btn-primary" onClick={this.openForm}>Reserve This Room</button>
-            {this.state.showForm && <ReservationForm info={room}/>}
         </div>
+        {this.state.showForm && <ReservationForm info={room}/>}
         </>
         )
     }
