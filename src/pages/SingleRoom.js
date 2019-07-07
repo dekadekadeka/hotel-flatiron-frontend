@@ -5,6 +5,7 @@ import Banner from "../components/Banner"
 import {Link} from "react-router-dom"
 import {RoomContext} from "../Context"
 import StyledHero from "../components/StyledHero"
+import ReservationForm from "../components/ReservationForm"
 
 export default class SingleRoom extends Component {
     constructor(props){
@@ -12,8 +13,13 @@ export default class SingleRoom extends Component {
         // console.log(this.props)
         this.state ={
             slug: this.props.match.params.slug,
-            defaultBcg
+            defaultBcg,
+            showForm: false
         };
+    }
+
+    openForm = () =>  {
+        this.setState({showForm: !this.state.showForm})
     }
 
     static contextType = RoomContext;
@@ -21,7 +27,6 @@ export default class SingleRoom extends Component {
     render() {
         const {getRoom} = this.context;
         const room = getRoom(this.state.slug);
-
         if(!room){
             return <div className="error">
                 <h3>No such room found...</h3>
@@ -35,6 +40,7 @@ export default class SingleRoom extends Component {
         breakfast, pets, images} = room
 
         const [mainImg, ...defaultImg] = images
+        console.log(room)
         return (
         <>
         <StyledHero img={mainImg || this.state.defaultBcg}>
@@ -75,9 +81,8 @@ export default class SingleRoom extends Component {
             </ul>
         </section>
         <div className="reservation-btn">
-        <Link to="/reservation" className="btn-primary">
-                    select this room
-                </Link>
+            <button className="btn-primary" onClick={this.openForm}>Reserve This Room</button>
+            {this.state.showForm && <ReservationForm info={room}/>}
         </div>
         </>
         )
