@@ -21,7 +21,7 @@ export default class SingleRoom extends Component {
     render() {
         const {getRoom} = this.context;
         const room = getRoom(this.state.slug);
-
+        console.log(room)
         if(!room){
             return <div className="error">
                 <h3>No such room found...</h3>
@@ -76,7 +76,7 @@ export default class SingleRoom extends Component {
         </section>
         <div className="reservation-btn">
         <Link to="/reservation" className="btn-primary">
-                    select this room
+                    Select This Room
                 </Link>
         </div>
         </>
