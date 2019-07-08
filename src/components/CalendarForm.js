@@ -2,15 +2,23 @@ import React, { Component } from 'react'
 import Calendar from "react-calendar"
 import Moment from "react-moment"
 import moment from 'moment';
-import BigForm from "./BigForm"
+import Authenticate from "./Authenticate"
 
 export default class CalendarForm extends Component {
-    
-
-    state={
-        dates: new Date(),
-        guests: 0,
-        isOpen: false
+    constructor(){
+        super()
+        this.state={
+            dates: new Date(),
+            guests: 0,
+            // firstName: "",
+            // lastName: "",
+            // username:"",
+            // email: "",
+            // phoneNumber: "",
+            // address: "",
+            // password: "",
+            isOpen: false
+        }
     }
 
     getOptions = () =>  {
@@ -22,13 +30,21 @@ export default class CalendarForm extends Component {
         return options
     }
 
-    onChange = (dates) => this.setState({
+    setDates = (dates) => this.setState({
         dates
     })
 
     setGuests = (e) => this.setState({
         guests: e.target.value
     })
+
+    changeHandler = (e) => {
+        console.log("hi", e.target.value)
+
+        this.setState({
+            firstName: e.target.value
+        })
+    }
 
     handleOpen = () => {
         console.log("handle open")
@@ -46,7 +62,7 @@ export default class CalendarForm extends Component {
         <div className="res-form">
         <div className="calendar">
                 <Calendar selectRange={true}
-                onChange={this.onChange}
+                onChange={this.setDates}
                 value={this.state.dates}/>
             </div>
         <div className="res-info">
@@ -65,9 +81,9 @@ export default class CalendarForm extends Component {
         </div>
         </div>
         {this.state.isOpen && 
-        <BigForm price={totalPrice} 
-        guests={this.state.guests}
-        dates={this.state.dates}/>}
+        <div className="blue-box"><Authenticate />
+        {/* if already signed in, render confirmation here */}
+        </div>}
         </>
         )
     }
