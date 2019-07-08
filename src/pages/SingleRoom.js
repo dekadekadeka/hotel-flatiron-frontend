@@ -5,7 +5,7 @@ import Banner from "../components/Banner"
 import {Link} from "react-router-dom"
 import {RoomContext} from "../Context"
 import StyledHero from "../components/StyledHero"
-import ReservationForm from "../components/ReservationForm"
+import CalendarForm from "../components/CalendarForm"
 
 export default class SingleRoom extends Component {
     constructor(props){
@@ -40,7 +40,6 @@ export default class SingleRoom extends Component {
         breakfast, pets, images} = room
 
         const [mainImg, ...defaultImg] = images
-        console.log(room)
         return (
         <>
         <StyledHero img={mainImg || this.state.defaultBcg}>
@@ -83,7 +82,7 @@ export default class SingleRoom extends Component {
         <div className="reservation-btn">
             <button className="btn-primary" onClick={this.openForm}>Reserve This Room</button>
         </div>
-        {this.state.showForm && <ReservationForm info={room}/>}
+        {this.state.showForm && <CalendarForm info={room}/>}
         </>
         )
     }

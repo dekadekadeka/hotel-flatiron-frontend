@@ -488,6 +488,7 @@ h6 {
 .form-group {
   text-transform: capitalize;
 }
+
 .form-group label {
   display: block;
   letter-spacing: var(--mainSpacing);
@@ -527,7 +528,16 @@ h6 {
 /* end of rooms filter*/
 /* reservation form */
 .res-form{
-  display: inline-flex;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.res-form h6{
+  margin-bottom: 1rem;
+  letter-spacing: var(--mainSpacing);
+  display: flex;
 }
 .calendar{
   display: inline-flex;
@@ -539,3 +549,13 @@ h6 {
   display: inline-block;
 }
 /* end of reservation form */
+/* begin big form */
+.big-form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-width: 15px;
+  border-color: var(--primaryColor);
+}
+/* end big form */
