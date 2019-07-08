@@ -36,6 +36,8 @@ changeHandler = (e) => {
                 </form>
                 <h4>Not a member yet?</h4>
                 <h4>Sign up now!</h4>
+                {/* Sign up now will be a link to sign-in page 
+                if we use authentication */}
             </>
         )
     }
