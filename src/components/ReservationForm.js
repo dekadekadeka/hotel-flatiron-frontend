@@ -11,9 +11,8 @@ export default class ReservationForm extends Component {
         guests: ""
     }
 
-    onChange = (dates) => this.setState({ 
-        dates,
-        guests: this.state.guests})
+    onChange = (dates) => this.setState({dates})
+
     render() {
         let datesArray = this.state.dates;
 
@@ -33,7 +32,7 @@ export default class ReservationForm extends Component {
             value={this.props.info.capacity}
             className="form-control"
             onChange={this.onChange}>
-                <option value="capacity">{this.props.info.capacity}</option>
+                {/* {options for capacity} */}
             </select>
         </div>
         </div>
