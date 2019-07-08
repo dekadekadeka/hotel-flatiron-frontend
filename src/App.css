@@ -526,9 +526,16 @@ h6 {
 }
 /* end of rooms filter*/
 /* reservation form */
-.reservation-div{
+.res-form{
+  display: inline-flex;
+}
+.calendar{
+  display: inline-flex;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.res-info{
   display: inline-block;
-  justify-content: center;
-  align-content: center;
 }
 /* end of reservation form */
