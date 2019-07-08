@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Calendar from "react-calendar"
 import Moment from "react-moment"
 import moment from 'moment';
+import { Link } from "react-router-dom"
 import Authenticate from "./Authenticate"
 
 export default class CalendarForm extends Component {
@@ -81,8 +82,12 @@ export default class CalendarForm extends Component {
         </div>
         </div>
         {this.state.isOpen && 
-        <div className="blue-box"><Authenticate />
-        {/* if already signed in, render confirmation here */}
+        <div className="blue-box">
+        {/* If we use Authentication uncomment this <Authenticate /> */}
+        <h2>Congratulations!</h2>
+        <h4>You have reserved the {this.props.info.name}</h4>
+        <Link to="/"><button className="btn-primary">Back Home</button></Link>
+        {/* if we authenticate, set link to "my reservations" */}
         </div>}
         </>
         )

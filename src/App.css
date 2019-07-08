@@ -567,6 +567,17 @@ h6 {
   line-height: 1.25;
   margin-bottom: .5em;
   margin: .5rem 1.5rem;
+  text-transform: capitalize;
+}
+.blue-box h2 {
+  font-size: 2em;
+  line-height: 1.25;
+  margin-bottom: .5em;
+  margin: .5rem 1.5rem;
+}
+
+.blue-box button{
+  margin-bottom: 1rem;
 }
 .auth-form{
   display: grid;
