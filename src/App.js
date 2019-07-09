@@ -19,7 +19,7 @@ function App() {
       <Route exact path="/" component={Home} />
       <Route exact path="/rooms/" component={Rooms} />
       <Route exact path="/rooms/:slug" component={SingleRoom} />
-      <Route exact path="/my-reservation" component={MyReservation} />
+      <Route exact path="/login" component={MyReservation} />
       <Route component={Error} />
       </Switch>
     </div>

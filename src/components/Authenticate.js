@@ -55,7 +55,8 @@ export default class Authenticate extends Component {
                     name="password"   
                     value={this.state.password} 
                     onChange={this.changeHandler} />
-                    <input type="submit" />
+                    <br />
+                    <input className="btn-primary" type="submit" />
                 </form>
                 <h4>Not a member yet?</h4>
                 <h4>Sign up now!</h4>
