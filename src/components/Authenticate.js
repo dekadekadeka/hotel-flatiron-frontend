@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
 import CreateAccount from "./CreateAccount"
+import Rooms from '../pages/Rooms'
 
 export default class Authenticate extends Component {
     constructor(){
@@ -7,7 +9,8 @@ export default class Authenticate extends Component {
         this.state={
             username: "",
             password: "",
-            isOpen: false
+            isOpen: false,
+            redirect: null
         }
 }
 
@@ -37,9 +40,12 @@ export default class Authenticate extends Component {
         .then(res => {
             if(res.error || res.errors)
                 console.log(res)
-            else
+            else {
                 localStorage.setItem('jwt', res.jwt)
+                this.setState({ redirect: <Redirect to='/rooms/' /> })
+            }
         })
+        
     }
 
     handleOpen = () => {
@@ -51,6 +57,7 @@ export default class Authenticate extends Component {
     render() {
         return (
             <>
+                { this.state.redirect }
                 <form className="auth-form" onSubmit={this.login}>
                     <label htmlFor="username">Username: </label>
                     <input type="username" 

@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import Authenticate from "./Authenticate"
+import { Redirect } from 'react-router-dom'
 
 export default class CreateAccount extends Component {
     constructor(){
         super()
         this.state={
-            firstName: "",
-            lastName: "",
+            first_name: "",
+            last_name: "",
             username: "",
-            password: ""
+            password: "",
+            redirect: null
         }
     }
 
@@ -24,42 +26,48 @@ export default class CreateAccount extends Component {
         })
     }
 
-    login = e => {
+    storeUser = e => {
         e.preventDefault()
-        fetch('http://localhost:3000/login', {
+        fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 user:{
-                    username: e.target.username.value,
-                    password: e.target.password.value
+                    username: this.state.username,
+                    password: this.state.password,
+                    first_name: this.state.first_name,
+                    last_name: this.state.last_name
                 }
             })
         })
         .then(res => res.json())
         .then(res => {
             if(res.error || res.errors)
-                console.log(res)
-            else
+                console.log(res.errors)
+            else {
                 localStorage.setItem('jwt', res.jwt)
+                this.setState({ redirect: <Redirect to='/rooms/' /> })
+            }
         })
+
     }
 
     render() {
         
         return (
             <div>
-                <form className="create-form" onSubmit={this.login}>
-                    <label htmlFor="firstname">First Name: </label>
-                    <input type="firstname" 
-                    name="firstname"   
-                    value={this.state.firstName} 
+                { this.state.redirect }
+                <form className="create-form" onSubmit={this.saveUser}>
+                    <label htmlFor="first_name">First Name: </label>
+                    <input type="first_name" 
+                    name="first_name"   
+                    value={this.state.first_name} 
                     onChange={this.changeHandler} />
 
-                    <label htmlFor="lastname">Last Name: </label>
-                    <input type="lastname" 
-                    name="lastname"   
-                    value={this.state.lastName} 
+                    <label htmlFor="last_name">Last Name: </label>
+                    <input type="last_name" 
+                    name="last_name"   
+                    value={this.state.last_name} 
                     onChange={this.changeHandler} />
 
                     <label htmlFor="username">Username: </label>
@@ -74,7 +82,7 @@ export default class CreateAccount extends Component {
                     value={this.state.password} 
                     onChange={this.changeHandler} />
 
-                    <input type="submit" />
+                    <input onClick={this.storeUser} type="submit" />
                 </form>
             </div>
         )
