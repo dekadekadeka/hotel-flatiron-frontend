@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
-import Authenticate from "../components/Authenticate"
+import Authenticate from '../components/Authenticate';
+let token = localStorage.jwt
 
 export default class MyReservation extends Component {
+ 
+
+
     render() {
         return (
             <div className="my-reservation">
-                <div className="blue-box">
-                <Authenticate />
-                {/* here you can set the stuff to render after authentication is complete */}
-                </div>
+            {token !== undefined ? <div> "Hello World" </div> : <div> "Link to Login" </div>}
             </div>
         )
     }
