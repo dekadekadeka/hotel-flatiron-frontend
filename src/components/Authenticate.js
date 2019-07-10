@@ -57,7 +57,7 @@ export default class Authenticate extends Component {
 
   render() {
     return (
-      <>
+      <div className="blue-box">
         {this.state.redirect}
         <form className="auth-form" onSubmit={this.login}>
           <label htmlFor="username">Username: </label>
@@ -82,7 +82,7 @@ export default class Authenticate extends Component {
           Sign up now!
         </button>
         {this.state.isOpen && <CreateAccount />}
-      </>
+      </div>
     );
   }
 }
