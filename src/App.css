@@ -8,7 +8,7 @@
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
-  --mainGrey: #ececec;
+  --mainGrey:#ececec;
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
@@ -559,7 +559,7 @@ h6 {
   border-width: 15px;
   border-color: var(--primaryColor);
   max-width: max-content;
-  margin: auto;
+  margin: 30vh auto;
 }
 
 .blue-box h4 {
@@ -577,6 +577,12 @@ h6 {
 }
 
 .blue-box button{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blue-box input{
   margin-bottom: 1rem;
 }
 .auth-form{
@@ -592,3 +598,9 @@ h6 {
   width: 100%;
 }
 /* end my reservation */
+.profile div{
+  width: 10rem;
+    height: 5px;
+    background: var(--primaryColor);
+    margin: 1.7rem auto;
+}

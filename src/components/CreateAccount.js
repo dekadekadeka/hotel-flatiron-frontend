@@ -55,7 +55,7 @@ export default class CreateAccount extends Component {
     render() {
         
         return (
-            <div>
+            <div className="blue-box">
                 { this.state.redirect }
                 <form className="create-form" >
                     <label htmlFor="first_name">First Name: </label>
