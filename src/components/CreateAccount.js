@@ -57,7 +57,7 @@ export default class CreateAccount extends Component {
         return (
             <div>
                 { this.state.redirect }
-                <form className="create-form" onSubmit={this.saveUser}>
+                <form className="create-form" >
                     <label htmlFor="first_name">First Name: </label>
                     <input type="first_name" 
                     name="first_name"   
