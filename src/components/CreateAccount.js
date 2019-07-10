@@ -45,8 +45,8 @@ export default class CreateAccount extends Component {
             if(res.error || res.errors)
                 console.log(res.errors)
             else {
-                localStorage.setItem('jwt', res.jwt)
-                this.setState({ redirect: <Redirect to='/rooms/' /> })
+                localStorage.setItem('token', res.jwt)
+                this.setState({ redirect: <Redirect to='/' /> })
             }
         })
 
