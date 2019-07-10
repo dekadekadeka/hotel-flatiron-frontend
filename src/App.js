@@ -21,7 +21,7 @@ render() {
       <Navbar />
       <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/res/" component={MyReservation} />
+      <Route exact path="/reservation/" component={MyReservation} />
       <Route exact path="/rooms/" component={Rooms} />
       <Route exact path="/rooms/:slug" component={SingleRoom} />
       <Route exact path="/login" component={Authenticate} />
