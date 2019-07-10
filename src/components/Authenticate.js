@@ -26,6 +26,7 @@ export default class Authenticate extends Component {
 
     login = e => {
         e.preventDefault()
+
         fetch('http://localhost:3000/login', {
             method: 'POST',
             headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
@@ -41,8 +42,8 @@ export default class Authenticate extends Component {
             if(res.error || res.errors)
                 console.log(res)
             else {
-                localStorage.setItem('jwt', res.jwt)
-                this.setState({ redirect: <Redirect to='/rooms/' /> })
+                localStorage.setItem('token', res.jwt)
+                this.setState({ redirect: <Redirect to='/' /> })
             }
         })
         
@@ -75,8 +76,6 @@ export default class Authenticate extends Component {
                 <h4>Not a member yet?</h4>
                 <button className="btn-primary" onClick={this.handleOpen}>Sign up now!</button>
                 {this.state.isOpen && <CreateAccount />}
-                {/* Sign up now will be a link to sign-in page 
-                if we use authentication */}
             </>
         )
     }
