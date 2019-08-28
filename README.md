@@ -1,6 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+The frontend for [Hotel Flatiron Backend](https://github.com/dekadekadeka/hotel-flatiron-backend).
+
+Based off of [React Beach Resort](https://www.youtube.com/watch?v=l0JbuMVXaTs) by [John Smilga](https://github.com/john-smilga). It's a 6 hour long video but it taught me so much about React and coding in general. Our Mod 4 project for Flatiron School consisted of personalizing this app and adding a backend to it. Please enjoy.
+
 ### `npm install`
-Before you anything
+Before you do anything
 
 ## Available Scripts
 
