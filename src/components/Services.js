@@ -23,7 +23,7 @@ export default class Services extends Component {
             {
                 icon:<FaGithubAlt />,
                 title: "Push It Good!",
-                info: "Izakaya Melbourne boulevard sleepy Fast Lane carefully curated. Winkreative Shinkansen carefully curated izakaya efficient Porter liveable bespoke charming signature cutting-edge Toto finest tote bag craftsmanship. Muji elegant alluring first-class, Comme des Garçons Fast Lane sleepy Marylebone impeccable handsome lovely bureaux St Moritz efficient. ANA iconic Swiss, exquisite Baggu hand-crafted Tsutaya Marylebone remarkable pintxos Beams perfect. Finest Scandinavian efficient discerning quality of life."
+                info: "Izakaya Melbourne boulevard sleepy Fast Lane carefully curated. Winkreative Shinkansen carefully curated izakaya efficient Porter liveable bespoke charming signature cutting-edge Toto finest tote bag craftsmanship."
             }
         ]
     }
