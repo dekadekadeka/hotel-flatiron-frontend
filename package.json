@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@lls/react-light-calendar": "^2.2.0",
+    "ajv": "^8.11.0",
+    "ajv-keywords": "^5.1.0",
     "contentful": "^9.1.34",
     "moment": "^2.29.4",
     "react": "^16.14.0",
@@ -13,7 +15,8 @@
     "react-moment": "^0.9.7",
     "react-router-dom": "^5.3.3",
     "react-scripts": "^5.0.1",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "typescript": "^4.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
