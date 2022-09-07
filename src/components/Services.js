@@ -23,7 +23,7 @@ export default class Services extends Component {
             {
                 icon:<FaGithubAlt />,
                 title: "Push It Good!",
-                info: "Hey! I'm a porno-dealing monster, what do I care what you think? Why would a robot need to drink? Enough about your promiscuous mother, Hermes! We have bigger problems. I am the man with no name, Zapp Brannigan!"
+                info: "Izakaya Melbourne boulevard sleepy Fast Lane carefully curated. Winkreative Shinkansen carefully curated izakaya efficient Porter liveable bespoke charming signature cutting-edge Toto finest tote bag craftsmanship."
             }
         ]
     }
