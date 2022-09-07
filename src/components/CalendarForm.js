@@ -3,7 +3,7 @@ import Calendar from "react-calendar"
 import Moment from "react-moment"
 import moment from 'moment';
 import { Link } from "react-router-dom"
-import Authenticate from "./Authenticate"
+// import Authenticate from "./Authenticate"
 
 export default class CalendarForm extends Component {
     constructor(){

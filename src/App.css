@@ -558,8 +558,9 @@ h6 {
   border-style: solid;
   border-width: 15px;
   border-color: var(--primaryColor);
-  max-width: max-content;
+  width: max-content;
   margin: 30vh auto;
+  max-width: 50%;
 }
 
 .blue-box h4 {

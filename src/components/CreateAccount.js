@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Authenticate from "./Authenticate"
+// import Authenticate from "./Authenticate"
 import { Redirect } from 'react-router-dom'
 
 export default class CreateAccount extends Component {

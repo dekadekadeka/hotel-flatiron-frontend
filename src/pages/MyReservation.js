@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Authenticate from "../components/Authenticate";
+import React from "react";
+// import Authenticate from "../components/Authenticate";
 import Profile from "../components/Profile";
 
 const loggedIn = () => !!localStorage.getItem("token")

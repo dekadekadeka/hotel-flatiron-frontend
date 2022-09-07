@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Authenticate from "./Authenticate";
+// import Authenticate from "./Authenticate";
 
 export default class Profile extends Component {
   state = {user: []}
